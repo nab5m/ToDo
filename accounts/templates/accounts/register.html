@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form action="{% url 'accounts:register' %}" method="post" style="width: fit-content; margin: 0 auto;">
+        {% csrf_token %}
+        {% for field in form %}
+            <p>
+                <small class="text-danger">{{ field.errors }}</small><br>
+                {{ field.label }}<br>
+                {{ field }}<br>
+                <small class="text-primary">{{ field.help_text }}</small>
+            </p>
+        {% endfor %}
+        <input type="submit" value="회원가입" />
+    </form>
+{% endblock %}

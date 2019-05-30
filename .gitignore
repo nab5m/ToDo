@@ -1,0 +1,7 @@
+__pycache__
+*.pyc
+db.sqlite3
+ToDo/settings.py
+*.log
+venv
+.idea
